@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="menu-bar">
+    <ul>
+        <li><i class="fa fa-home"></i><a href="home.html">Home</a></li>
+        <li><i class="fa fa-mobile-phone"></i><a href="mobile.html">Mobile</a></li>
+        <li><a href="#">Auto</a></i>
+        <div class="sub-menu-1">
+            <ul>
+                <li><i class="fa fa-cab"></i><a href="car.html">Cars</a></li>
+                <li><i class="fa fa-motorcycle"></i><a href="Bikes.html">Bikes</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><i class="fa fa-tv"></i><a href="telivision.html">Telivision</a></li>
+        
+        <li><i class="fa fa-clock-o"></i><a href="clock.html">Date and time</a></li>
+        <li><i class="fa fa-phone"></i><a href="contact.html">Contact US</a></li>
+        
+
+
+    </ul>
+    </div>
+ 
+<div class="container">
+
+ 
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="images/bike.jfif" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="images/bikes2.jfif" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="images/phone.jfif" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="images/showroom.jfif" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="images/tv.jfif" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="images/tv2.jfif" style="width:100%">
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+ 
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/bike.jfif" style="width:100%" onclick="currentSlide(1)" alt="bikes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bikes2.jfif" style="width:100%" onclick="currentSlide(2)" alt="bikes2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/phone.jfif" style="width:100%" onclick="currentSlide(3)" alt="phone">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/showroom.jfif" style="width:100%" onclick="currentSlide(4)" alt="showroom">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/tv.jfif" style="width:100%" onclick="currentSlide(5)" alt="tv">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/tv2.jfif" style="width:100%" onclick="currentSlide(6)" alt="tv2">
+    </div>
+  </div>
+</div>
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

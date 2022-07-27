@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="sushan, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="contact.css" rel="stylesheet" />
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="menu-bar">
+    <ul>
+        <li><i class="fa fa-home"></i><a href="home.html">Home</a></li>
+        <li><i class="fa fa-mobile-phone"></i><a href="mobile.html">Mobile</a></li>
+        <li><a href="#">Auto</a></i>
+        <div class="sub-menu-1">
+            <ul>
+                <li><i class="fa fa-cab"></i><a href="car.html">Cars</a></li>
+                <li><i class="fa fa-motorcycle"></i><a href="Bikes.html">Bikes</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><i class="fa fa-tv"></i><a href="telivision.html">Telivision</a></li>
+        
+        <li><i class="fa fa-clock-o"></i><a href="clock.html">Date and time</a></li>
+        <li><i class="fa fa-phone"></i><a href="contact.html">Contact US</a></li>
+        
+
+
+    </ul>
+    </div>
+    <div class="wrapper">
+      <h2>Contact us</h2>
+      <form method="POST">
+        <h4>Account</h4>
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" required class="name" />
+            <i class="fa fa-user icon"></i>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Nick Name" required class="name" />
+            <i class="fa fa-user icon"></i>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email Adress"
+              required
+              class="name"
+            />
+            <i class="fa fa-envelope icon"></i>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="input-box">
+            <h4>Date of Birth</h4>
+            <input type="text" placeholder="DD" class="dob" />
+            <input type="text" placeholder="MM" class="dob" />
+            <input type="text" placeholder="YYYY" class="dob" />
+          </div>
+          <div class="input-box">
+            <h4>Gender</h4>
+            <input type="radio" id="b1" name="gendar" checked class="radio" />
+            <label for="b1">Male</label>
+            <input type="radio" id="b2" name="gendar" class="radio" />
+            <label for="b2">Female</label>
+          </div>
+        </div>
+      <div >
+        <div class="input-group">
+            <div class="input-box">
+                <h4>Message</h4>
+                <textarea class="field" placeholder="Please type you problem here" rows="10" cols="40"></textarea>
+      
+        </div>
+        </div>
+          
+     
+          <div class="input-box">
+            <button type="submit">Submit Now</button>
+            
+            <button type="button" class="cancelbtn">Cancel</button>
+            
+              
+             
+            </div>
+            <div class="go-back">
+              <input type="button" value="Go back!" onclick="history.back()">
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
